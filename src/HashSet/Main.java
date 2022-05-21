@@ -23,6 +23,9 @@ public class Main {
         System.out.print("try to remove asdf again = ");
         System.out.println(set.remove("asdf"));
 
+        System.out.print("contains = ");
+        System.out.println(set.contains(null));
+
         System.out.print("is empty = ");
         System.out.println(set.isEmpty());
 

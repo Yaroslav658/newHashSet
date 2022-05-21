@@ -3,11 +3,11 @@ package HashSet;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MyHashSet<String> implements MySet<String> {
-    ArrayList<String> myArrayList = new ArrayList<>();
+public class MyHashSet<E> implements MySet<E> {
+    ArrayList<E> myArrayList = new ArrayList<>();
 
     @Override
-    public boolean add(String e) {
+    public boolean add(E e) {
         // добавить элемент если его ещё нет пройти по листу поискать элемет вернуть true если эл. добавился, проверить тип элемента
         if(!myArrayList.contains(e)){
             myArrayList.add(e);
@@ -22,7 +22,7 @@ public class MyHashSet<String> implements MySet<String> {
     }
 
     @Override
-    public boolean contains(String o) {
+    public boolean contains(E o) {
        return myArrayList.contains(o);
     }
 
@@ -32,7 +32,7 @@ public class MyHashSet<String> implements MySet<String> {
     }
 
     @Override
-    public boolean remove(String o) {
+    public boolean remove(E o) {
        // return myArrayList.remove(o) == null;
         if(myArrayList.contains(o))
         {
@@ -48,8 +48,8 @@ public class MyHashSet<String> implements MySet<String> {
     }
     @Override
     @SuppressWarnings("unchecked")
-    public String[] toArray() {
-        return (String[]) myArrayList.toArray();
+    public E[] toArray() {
+        return (E[]) myArrayList.toArray();
     }
     @Override
     public java.lang.String toString() {
