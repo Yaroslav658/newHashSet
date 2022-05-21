@@ -15,7 +15,7 @@ public class Main {
             set.add("qwer");
             set.add("zxcv");
             set.add("asdf");
-            System.out.println(set); // [zxcv, qwer, asdf]
+            System.out.println(set.toString()); // [zxcv, qwer, asdf]
 
     }
 }

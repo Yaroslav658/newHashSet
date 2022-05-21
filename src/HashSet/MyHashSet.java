@@ -49,25 +49,12 @@ public class MyHashSet<String> implements MySet<String> {
     public int size() {
         return myArrayList.size();
     }
-
     @Override
     public String[] toArray() {
-//        String[] result = new String[map.size()];
-//        int index = 0;
-//        for (MyMap.Entry entry : map.toArray()) {
-//            result[index++] = entry.getKey();
-//        }
-//        return result;
-//    }
-
-        String[] catsArray = myArrayList.toArray(String[]);
-        return catsArray;
+        return (String[]) myArrayList.toArray();
     }
-
-//    @Override
-//    public java.lang.String toString() {
-//        return Arrays.toString(toArray());
-//    }
-
-
+    @Override
+    public java.lang.String toString() {
+        return Arrays.toString(toArray());
+    }
 }
