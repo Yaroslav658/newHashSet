@@ -4,62 +4,70 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 // При наличии MyHashMap реализация тривиальная
-public class MyHashSet implements MySet {
+public class MyHashSet<String> implements MySet<String> {
 
- //   private MyHashMap map = new MyHashMap();
+    //   private MyHashMap map = new MyHashMap();
 
-    private ArrayList<String> myArrayList = new ArrayList<String>();
+
+
+    ArrayList<String> myArrayList = new ArrayList<>();
     // просто заглушка
-  //  private String placeHolder = "";
+    //  private String placeHolder = "";
 
     @Override
     public boolean add(String e) {
         // добавить элемент если его ещё нет пройти по листу поискать элемет вернуть true если эл. добавился, проверить тип элемента
+        myArrayList.add(e);
+        return true;
 
-
-
- //       return map.put(e, placeHolder) == null;
+        //       return map.put(e, placeHolder) == null;
     }
 
     @Override
     public void clear() {
-        map.clear();
+        myArrayList.clear();
     }
 
     @Override
     public boolean contains(String o) {
-        return map.containsKey(o);
+     //   return myArrayList.containsKey(o);
+        return true;
     }
 
     @Override
     public boolean isEmpty() {
-        return map.isEmpty();
+        return myArrayList.isEmpty();
     }
 
     @Override
     public boolean remove(String o) {
-        return map.remove(o) == null;
+       // return myArrayList.remove(o) == null;
+        return true;
     }
 
     @Override
     public int size() {
-        return map.size();
+        return myArrayList.size();
     }
 
     @Override
     public String[] toArray() {
-        String[] result = new String[map.size()];
-        int index = 0;
-        for (MyMap.Entry entry : map.toArray()) {
-            result[index++] = entry.getKey();
-        }
-        return result;
+//        String[] result = new String[map.size()];
+//        int index = 0;
+//        for (MyMap.Entry entry : map.toArray()) {
+//            result[index++] = entry.getKey();
+//        }
+//        return result;
+//    }
+
+        String[] catsArray = myArrayList.toArray(String[]);
+        return catsArray;
     }
 
-    @Override
-    public String toString() {
-        return Arrays.toString(toArray());
-    }
+//    @Override
+//    public java.lang.String toString() {
+//        return Arrays.toString(toArray());
+//    }
 
 
 }

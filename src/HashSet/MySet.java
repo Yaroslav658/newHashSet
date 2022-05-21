@@ -1,6 +1,6 @@
 package HashSet;
 
-public interface MySet {
+public interface MySet<String> {
     boolean add(String e); // Returns true if this set did not already contain the specified element
 
     void clear();
@@ -13,5 +13,5 @@ public interface MySet {
 
     int size();
 
-    String[] toArray();
+//    String[] toArray();
 }
