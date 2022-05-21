@@ -8,7 +8,6 @@ public class MyHashSet<E> implements MySet<E> {
 
     @Override
     public boolean add(E e) {
-        // добавить элемент если его ещё нет пройти по листу поискать элемет вернуть true если эл. добавился, проверить тип элемента
         if(!myArrayList.contains(e)){
             myArrayList.add(e);
             return true;
